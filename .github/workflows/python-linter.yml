@@ -1,0 +1,21 @@
+name: Flake8 Python Linter
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  flake8_lint:
+    runs-on: ubuntu-latest
+    name: Lint Python code with flake8
+    steps:
+      - name: Check out source repository
+        uses: actions/checkout@v3
+      - name: Set up Python environment
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+      - name: flake8 Lint
+        uses: py-actions/flake8@v2
