@@ -1,4 +1,5 @@
 flask==3.0.3
+flask-wtf==1.2.1
 rdkit==2024.3.2
 pandas==2.0.3
 pubchempy==1.0.4
