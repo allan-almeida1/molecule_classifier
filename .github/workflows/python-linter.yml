@@ -2,7 +2,11 @@ name: Flake8 Python Linter
 
 on:
   push:
+    branches:
+      - main
   pull_request:
+    paths:
+      - "**/*.py"
 
 jobs:
   flake8_py3:
