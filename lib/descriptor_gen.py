@@ -33,7 +33,7 @@ class DescriptorGen:
             props = np.array(self.property_getter.ComputeProperties(mol))
         return np.append(arr, props)
 
- 
+
 if __name__ == "__main__":
     descriptor_gen = DescriptorGen("desc")
     desc = descriptor_gen.from_smiles("CCCC")
