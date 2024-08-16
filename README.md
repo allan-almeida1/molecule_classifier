@@ -19,11 +19,9 @@ This application was tested in the following operating systems:
 - Ubuntu 20.04
 - Windows 11
 
-<div style="display: flex; gap: 50px;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original-wordmark.svg"  width="150"/>
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original-wordmark.svg" width="150"/>
-          
+<div style="display: inline_block">
+<img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original-wordmark.svg"  width="150"/>
+<img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original-wordmark.svg" width="150"/>
 </div>
 
 The following web browsers were tested:
@@ -32,12 +30,10 @@ The following web browsers were tested:
 - Mozilla Firefox
 - Microsoft Edge
 
-<div style="display: flex; gap: 30px; margin-top: 30px">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/chrome/chrome-original.svg" width="80" height="80"/>
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firefox/firefox-original.svg" width="80" height="80"/>
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Microsoft_Edge_logo_%282019%29.png" width="80" height="80"/>
+<div style="display: inline_block">
+<img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/chrome/chrome-original.svg" width="80" height="80"/>
+<img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firefox/firefox-original.svg" width="80" height="80"/>
+<img align="center" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Microsoft_Edge_logo_%282019%29.png" width="80" height="80"/>
           
 </div>
 
