@@ -13,6 +13,15 @@
 <div class="home-footer">
   <button onclick="sendMolecule()" id="send">SEND</button>
   <div id="helperText">Click the button to classify the molecule</div>
-  <div><div id="loaderDots" class="loader"></div></div>
+  <div id="loaderDots" class="loader"></div>
+  <div id="resultDiv">
+    <table id="resultTable">
+      <tr>
+        <td id="label">Prediction</td>
+        <td id="prediction">Inactive [3]</td>
+      </tr>
+    </table>
+    <div></div>
+    {% endblock footer %}
+  </div>
 </div>
-{% endblock footer %}

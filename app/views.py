@@ -33,7 +33,7 @@ api = Blueprint('api', __name__)
 def predict():
     response = {
         'success': True,
-        'prediction_id': 4,
+        'prediction_id': 1,
         'prediction_class': 'Inactive'
     }
     return jsonify(response)

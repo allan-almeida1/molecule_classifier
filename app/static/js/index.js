@@ -2,7 +2,9 @@ function showLoading() {
   let helperText = document.getElementById("helperText");
   let loader = document.getElementById("loaderDots");
   let button = document.getElementById("send");
+  let resultDiv = document.getElementById("resultDiv");
   loader.style.display = "block";
+  resultDiv.style.display = "none";
   helperText.textContent = "Processing";
   button.disabled = true;
 }
@@ -11,10 +13,18 @@ function showResult(data) {
   let helperText = document.getElementById("helperText");
   let loader = document.getElementById("loaderDots");
   let button = document.getElementById("send");
+  let resultDiv = document.getElementById("resultDiv");
+  let predictionTd = document.getElementById("prediction");
+  resultDiv.style.display = "block";
   loader.style.display = "none";
   helperText.textContent = "Click the button to classify the molecule";
   button.disabled = false;
-  console.log(data);
+  const predictionId = data.prediction_id;
+  const predictionClass = data.prediction_class;
+  const success = data.success;
+  predictionTd.textContent = success
+    ? predictionClass + " [" + predictionId + "]"
+    : "Unknown";
 }
 
 async function sendMolecule() {

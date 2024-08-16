@@ -29,3 +29,29 @@ button#send:disabled {
     cursor: inherit;
     color: #aaa;
 }
+
+table#resultTable {
+    border: var(--onyx) 1px solid;
+    padding: 0;
+}
+
+table#resultTable td {
+    padding: 10px 20px;
+    font-size: large;
+}
+
+td#label {
+    background-color: var(--light-blue);
+    color: var(--onyx);
+    font-weight: 500;
+}
+
+td#prediction {
+    background-color: var(--sky-blue);
+    color: var(--jet);
+    font-weight: 700;
+}
+
+#resultDiv {
+    display: none;
+}
