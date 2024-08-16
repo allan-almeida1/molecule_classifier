@@ -1,4 +1,4 @@
-from flask import Blueprint, send_from_directory, render_template
+from flask import Blueprint, send_from_directory, render_template, jsonify
 
 main = Blueprint('main', __name__)
 
@@ -24,3 +24,16 @@ def serve_ketcher():
 @ketcher.route('/static/<path:filename>', methods=['GET'])
 def serve_ketcher_static(filename):
     return send_from_directory('static/ketcher/static', filename)
+
+
+api = Blueprint('api', __name__)
+
+
+@api.route('/molecule-classifier/predict', methods=['POST'])
+def predict():
+    response = {
+        'success': True,
+        'prediction_id': 4,
+        'prediction_class': 'Inactive'
+    }
+    return jsonify(response)

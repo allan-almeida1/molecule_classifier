@@ -7,13 +7,14 @@ function showLoading() {
   button.disabled = true;
 }
 
-function showDone() {
+function showResult(data) {
   let helperText = document.getElementById("helperText");
   let loader = document.getElementById("loaderDots");
   let button = document.getElementById("send");
   loader.style.display = "none";
   helperText.textContent = "Click the button to classify the molecule";
   button.disabled = false;
+  console.log(data);
 }
 
 async function sendMolecule() {
@@ -32,14 +33,25 @@ async function sendMolecule() {
   // Get the molecule in Smiles format
   const molecule = await ketcher.getSmiles();
 
+  const data = {
+    smiles: molecule,
+  };
+
   // Send to the backend
-  fetch("http://numbersapi.com/random").then((response) => {
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-    response.text().then((data) => {
-      console.log(data);
-      showDone();
+  fetch(apiUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response failed");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      showResult(data);
     });
-  });
 }

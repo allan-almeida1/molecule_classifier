@@ -1,5 +1,5 @@
 from flask import Flask
-from app.views import main, ketcher
+from app.views import main, ketcher, api
 
 
 def create_app():
@@ -8,5 +8,6 @@ def create_app():
     app.config.from_object("config.Config")
     app.register_blueprint(main)
     app.register_blueprint(ketcher, url_prefix='/ketcher')
+    app.register_blueprint(api, url_prefix='/api/v1')
 
     return app

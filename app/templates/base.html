@@ -40,6 +40,9 @@
     </header>
     <main>{% block content %} {% endblock %}</main>
     <footer>{% block footer %}{% endblock footer %}</footer>
+    <script>
+      const apiUrl = "{{ url_for('api.predict')}}";
+    </script>
     <script src="{{ url_for('static', filename='js/index.js')}}"></script>
   </body>
 </html>
