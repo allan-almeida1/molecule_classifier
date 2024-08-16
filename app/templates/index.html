@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block page_css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/home.css') }}"
+/>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/loader.css') }}"
+/>
+{% endblock page_css %} {% block content %}
+<iframe id="ifKetcher" src="{{ url_for('ketcher.serve_ketcher') }}"></iframe>
+{% include "dialog.html" %} {% endblock content %} {% block footer %}
+<div class="home-footer">
+  <button onclick="sendMolecule()" id="send">SEND</button>
+  <div id="helperText">Click the button to classify the molecule</div>
+  <div id="loaderDots" class="loader"></div>
+  <div id="resultDiv">
+    <table id="resultTable">
+      <tr>
+        <td id="label">Prediction</td>
+        <td id="prediction">Inactive [3]</td>
+      </tr>
+    </table>
+    <div></div>
+    {% endblock footer %}
+  </div>
+</div>

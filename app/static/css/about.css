@@ -1,0 +1,19 @@
+div#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div#about h1 {
+    font-weight: 700;
+    padding-bottom: 1rem;
+    color: var(--onyx);
+}
+
+div#about p {
+    font-size: 20px;
+    width: 50%;
+    color: #343434;
+    line-height: 2rem;
+}

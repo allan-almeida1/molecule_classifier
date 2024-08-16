@@ -1,0 +1,21 @@
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/dialog.css') }}"
+/>
+<dialog id="welcomeDialog">
+  <h2>Welcome to <code>Molecule Classifier</code></h2>
+  <p>
+    This is a web application that uses a machine learning model (LGBM) to
+    classify molecules as Activator, Inhibitor, or Inactive.
+  </p>
+  <p>
+    Draw a molecule in the Ketcher app and click the <code>SEND</code> button to
+    classify it.
+  </p>
+
+  <p class="dialog-footer">
+    <input type="checkbox" id="dontShow" name="dont-show" />
+    <label for="dont-show"><b>Don't show this again</b></label>
+  </p>
+  <button onclick="closeDialog()" aria-label="close" class="x">❌</button>
+</dialog>

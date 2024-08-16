@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block page_css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/about.css') }}"
+/>
+{% endblock page_css %} {% block content %}
+<div id="about">
+  <h1>About</h1>
+  <p>
+    This is a web application that uses a machine learning model (LGBM) to
+    classify molecules as Activator, Inhibitor, or Inactive. Draw a molecule in
+    the Ketcher app and click the <code>SEND</code> button to classify it. The
+    model was trained on a dataset from the NCATS CYP3A4 assay, which contains
+    5,239 molecules.
+  </p>
+  <p>
+    The model was trained using the <code>LightGBM</code> library, which is a
+    gradient boosting framework that uses tree-based learning algorithms.
+  </p>
+  <p>
+    This web application was developed using Flask, a micro web framework for
+    Python. It uses the
+    <a href="https://lifescience.opensource.epam.com/ketcher/">EPAM Ketcher</a>
+    app to draw molecules and the <code>RDKit</code> library to convert the
+    molecule SMILES string to a descriptor vector.
+  </p>
+</div>
+{% endblock content %} {% block footer %}
+<p class="copyright">© 2024 Molecule Classifier | Developed by Allan Almeida</p>
+{% endblock footer %}
