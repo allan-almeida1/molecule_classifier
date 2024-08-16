@@ -1,3 +1,23 @@
+function showDialog() {
+  let dialog = document.getElementById("welcomeDialog");
+  dialog.showModal();
+}
+
+if (localStorage.getItem("dontShowDialog") !== "true") {
+  setTimeout(() => {
+    showDialog();
+  }, 2000);
+}
+
+function closeDialog() {
+  const dontShowAgainCheckbox = document.getElementById("dontShow");
+  if (dontShowAgainCheckbox.checked) {
+    localStorage.setItem("dontShowDialog", "true");
+  }
+  let dialog = document.getElementById("welcomeDialog");
+  dialog.close();
+}
+
 function showLoading() {
   let helperText = document.getElementById("helperText");
   let loader = document.getElementById("loaderDots");

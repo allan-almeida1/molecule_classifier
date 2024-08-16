@@ -9,7 +9,7 @@
 />
 {% endblock page_css %} {% block content %}
 <iframe id="ifKetcher" src="{{ url_for('ketcher.serve_ketcher') }}"></iframe>
-{% endblock content %} {% block footer %}
+{% include "dialog.html" %} {% endblock content %} {% block footer %}
 <div class="home-footer">
   <button onclick="sendMolecule()" id="send">SEND</button>
   <div id="helperText">Click the button to classify the molecule</div>
