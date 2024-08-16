@@ -6,17 +6,36 @@ from lib.descriptor_gen import DescriptorGen
 from rdkit import RDLogger
 RDLogger.DisableLog('rdApp.*')
 
+"""
+Main views
+
+- Home page
+- About page
+"""
+
 main = Blueprint('main', __name__)
 
 
 @main.route('/', methods=['GET'])
 def index():
+    """Render the home page."""
+
     return render_template('index.html')
 
 
 @main.route('/about', methods=['GET'])
 def about():
+    """Render the about page."""
+
     return render_template('about.html')
+
+
+"""
+Ketcher views
+
+- Serve the Ketcher web app
+- Serve the Ketcher static files
+"""
 
 
 ketcher = Blueprint('ketcher', __name__)
@@ -24,19 +43,31 @@ ketcher = Blueprint('ketcher', __name__)
 
 @ketcher.route('/', methods=['GET'])
 def serve_ketcher():
+    """Serve the Ketcher web app."""
+
     return send_from_directory('static/ketcher', 'index.html')
 
 
 @ketcher.route('/static/<path:filename>', methods=['GET'])
 def serve_ketcher_static(filename):
+    """Serve the Ketcher static files."""
+
     return send_from_directory('static/ketcher/static', filename)
 
+
+"""
+API views
+
+- Predict endpoint
+"""
 
 api = Blueprint('api', __name__)
 
 
 @api.route('/molecule-classifier/predict', methods=['POST'])
 def predict():
+    """Predict the class of a molecule given its SMILES string."""
+
     # Get the input data
     input_data = request.json
     smiles = input_data['smiles']

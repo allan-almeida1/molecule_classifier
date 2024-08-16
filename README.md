@@ -1,5 +1,9 @@
 # Molecule Classifier
 
+<div align="center">
+<img src="app/static/icon/android-chrome-512x512.png" width="300"/>
+</div>
+
 ## Overview
 
 This is a web application that uses a machine learning model (LGBM) to classify molecules as Activator, Inhibitor, or Inactive. Draw a molecule in the Ketcher app and click the `SEND` button to classify it. The model was trained on a dataset from the NCATS CYP3A4 assay, which contains 5,239 molecules.
@@ -7,6 +11,31 @@ This is a web application that uses a machine learning model (LGBM) to classify 
 The model was trained using the `LightGBM` library, which is a gradient boosting framework that uses tree-based learning algorithms.
 
 This web application was developed using Flask, a micro web framework for Python. It uses the [EPAM Ketcher](https://lifescience.opensource.epam.com/ketcher/) app to draw molecules and the RDKit library to convert the molecule SMILES string to a descriptor vector.
+
+## Testing Environments
+
+This application was tested in the following operating systems:
+
+- Ubuntu 20.04
+- Windows 11
+
+<div style="display: inline_block">
+<img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original-wordmark.svg"  width="150"/>
+<img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original-wordmark.svg" width="150"/>
+</div>
+
+The following web browsers were tested:
+
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
+
+<div style="display: inline_block">
+<img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/chrome/chrome-original.svg" width="80" height="80"/>
+<img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firefox/firefox-original.svg" width="80" height="80"/>
+<img align="center" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Microsoft_Edge_logo_%282019%29.png" width="80" height="80"/>
+          
+</div>
 
 ## Dependencies
 
