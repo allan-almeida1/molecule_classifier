@@ -4,10 +4,10 @@
   href="{{ url_for('static', filename='css/home.css') }}"
 />
 {% endblock page_css %} {% block content %}
-<iframe src="{{ url_for('ketcher.serve_ketcher') }}"></iframe>
+<iframe id="ifKetcher" src="{{ url_for('ketcher.serve_ketcher') }}"></iframe>
 {% endblock content %} {% block footer %}
 <div class="home-footer">
-  <button id="send">SEND</button>
+  <button onclick="sendMolecule()" id="send">SEND</button>
   <span>Click the button to classify the molecule </span>
 </div>
 {% endblock footer %}
