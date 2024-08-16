@@ -3,11 +3,16 @@
   rel="stylesheet"
   href="{{ url_for('static', filename='css/home.css') }}"
 />
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/loader.css') }}"
+/>
 {% endblock page_css %} {% block content %}
 <iframe id="ifKetcher" src="{{ url_for('ketcher.serve_ketcher') }}"></iframe>
 {% endblock content %} {% block footer %}
 <div class="home-footer">
   <button onclick="sendMolecule()" id="send">SEND</button>
-  <span>Click the button to classify the molecule </span>
+  <div id="helperText">Click the button to classify the molecule</div>
+  <div><div id="loaderDots" class="loader"></div></div>
 </div>
 {% endblock footer %}

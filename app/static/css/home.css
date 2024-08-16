@@ -4,7 +4,7 @@
     justify-content: left;
     flex: 1;
     padding: 0 60px;
-    gap: 30px;
+    gap: 40px;
 }
 
 button#send {
@@ -22,4 +22,10 @@ button#send {
 button#send:hover {
     background-color: var(--sky-blue-hover);
     transition: 0.3s;
+}
+
+button#send:disabled {
+    background-color: var(--light-blue);
+    cursor: inherit;
+    color: #aaa;
 }
