@@ -1,0 +1,25 @@
+.home-footer {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex: 1;
+    padding: 0 60px;
+    gap: 30px;
+}
+
+button#send {
+    background-color: var(--sky-blue);
+    padding: 10px 40px;
+    border-radius: 4px;
+    font-size: large;
+    font-weight: 700;
+    color: var(--jet);
+    border: none;
+    box-shadow: 0 3px 3px -1px #33333355;
+    cursor: pointer;
+}
+
+button#send:hover {
+    background-color: var(--sky-blue-hover);
+    transition: 0.3s;
+}
