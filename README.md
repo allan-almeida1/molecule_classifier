@@ -1,5 +1,9 @@
 # Molecule Classifier
 
+<div align="center">
+<img src="app/static/icon/android-chrome-512x512.png" width="300"/>
+</div>
+
 ## Overview
 
 This is a web application that uses a machine learning model (LGBM) to classify molecules as Activator, Inhibitor, or Inactive. Draw a molecule in the Ketcher app and click the `SEND` button to classify it. The model was trained on a dataset from the NCATS CYP3A4 assay, which contains 5,239 molecules.
